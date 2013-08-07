@@ -25,3 +25,7 @@ end
 function love.mousereleased(x, y, button)
 	interface.mousereleased(x, y, button)
 end
+
+function love.keyreleased(key)
+	interface.keyreleased(key)
+end
