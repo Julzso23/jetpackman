@@ -65,7 +65,7 @@ function gui:setTextColour(r, g, b)
 end
 
 function gui:draw()
-	if love.mouse.getX() > self.x and love.mouse.getX() < self.x+self.width and love.mouse.getY() > self.y and love.mouse.getY() < self.y+self.height then
+	if love.mouse.getX() > screen.x(self.x) and love.mouse.getX() < screen.x(self.x)+screen.x(self.width) and love.mouse.getY() > screen.y(self.y) and love.mouse.getY() < screen.y(self.y)+screen.y(self.height) then
 		if love.mouse.isDown("l") then
 			love.graphics.setColor(self.colour[1]-10, self.colour[2]-10, self.colour[3]-10, self.colour[4])
 		else
@@ -74,15 +74,15 @@ function gui:draw()
 	else
 		love.graphics.setColor(self.colour)
 	end
-	love.graphics.rectangle("fill", self.x, self.y, self.width, self.height)
+	love.graphics.rectangle("fill", screen.x(self.x), screen.y(self.y), screen.x(self.width), screen.y(self.height))
 	love.graphics.setColor(self.colour[1]-20, self.colour[2]-20, self.colour[3]-20, self.colour[4])
-	love.graphics.rectangle("line", self.x, self.y, self.width, self.height)
+	love.graphics.rectangle("line", screen.x(self.x), screen.y(self.y), screen.x(self.width), screen.y(self.height))
 	love.graphics.setColor(self.textColour)
-	love.graphics.printf(self.text, self.x, self.y+((self.height/2)-15), self.width, "center")
+	love.graphics.printf(self.text, screen.x(self.x), screen.y(self.y)+((screen.y(self.height)/2)-15), screen.x(self.width), "center")
 end
 
 function gui:onClicked(x, y, button)
-	if x > self.x and x < self.x+self.width and y > self.y and y < self.y+self.height then
+	if x > screen.x(self.x) and x < screen.x(self.x)+screen.x(self.width) and y > screen.y(self.y) and y < screen.y(self.y)+screen.y(self.height) then
 		return true
 	end
 end

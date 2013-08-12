@@ -1,4 +1,5 @@
 require("lua/gameplay/base")
+require("lua/gameplay/screen")
 require("lua/hud/base")
 require("lua/gui/base")
 
