@@ -31,6 +31,7 @@ function gameplay.update(dt)
 		controls.limit()
 
 		collision.collideBox(44, 30, 60)
+		collision.collideDrop(44, 30, 60)
 
 		char.shield(dt)
 	end

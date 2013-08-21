@@ -20,3 +20,21 @@ function collision.collideBox(w, t, b)
 		end
 	end
 end
+
+function collision.collideDrop(w, t, b)
+	for k, v in pairs(drop) do
+		if char.position.x+w/2 > v.x and char.position.x-w/2 < v.x+48 and char.position.y+t > v.y and char.position.y-b < v.y+48 then
+			v.y = -128
+			v.activated = false
+			if v.id == 1 then
+				if char.health <= 80 then
+					char.health = char.health + 20
+				else
+					char.health = 100
+				end
+			elseif v.id == 2 then
+			elseif v.id == 3 then
+			end
+		end
+	end
+end
