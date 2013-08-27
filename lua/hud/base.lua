@@ -13,5 +13,6 @@ end
 function hud.draw()
 	if game.mode == "playing" then
 		phud.drawScore()
+		phud.drawHealth()
 	end
 end

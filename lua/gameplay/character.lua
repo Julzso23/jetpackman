@@ -7,7 +7,7 @@ function char.init()
 	char.img.right = love.graphics.newImage("resources/images/characters/main/right.png")
 	char.img.current = char.img.idle
 
-	char.health = 100
+	char.health = 30
 	char.score = 0
 	char.invincibility = false
 	char.shieldTimer = 0

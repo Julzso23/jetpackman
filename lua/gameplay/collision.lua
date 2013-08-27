@@ -27,13 +27,15 @@ function collision.collideDrop(w, t, b)
 			v.y = -128
 			v.activated = false
 			if v.id == 1 then
-				if char.health <= 80 then
-					char.health = char.health + 20
+				if char.health <= 40 then
+					char.health = char.health + 10
 				else
-					char.health = 100
+					char.health = 50
 				end
 			elseif v.id == 2 then
+				char.score = char.score + 1
 			elseif v.id == 3 then
+				char.invincibility = true
 			end
 		end
 	end

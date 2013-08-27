@@ -4,9 +4,9 @@ function drops.create(baseY)
 	drops.timer = 0
 	
 	drop = {
-		drop1 = {id = 1, activated = false, x = 0, y = baseY, img = love.graphics.newImage("resources/images/drops/health.png")},
-		drop2 = {id = 2, activated = false, x = 128, y = baseY, img = love.graphics.newImage("resources/images/drops/coin.png")},
-		drop3 = {id = 3, activated = false, x = 256, y = baseY, img = love.graphics.newImage("resources/images/drops/shield.png")}
+		health = {id = 1, activated = false, x = 0, y = baseY, img = love.graphics.newImage("resources/images/drops/health.png")},
+		coin = {id = 2, activated = false, x = 128, y = baseY, img = love.graphics.newImage("resources/images/drops/coin.png")},
+		shield = {id = 3, activated = false, x = 256, y = baseY, img = love.graphics.newImage("resources/images/drops/shield.png")}
 	}
 end
 
